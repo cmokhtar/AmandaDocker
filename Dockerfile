@@ -3,4 +3,4 @@ COPY imsick.sh /tmp/
 WORKDIR		/tmp
 RUN chmod +x imsick.sh
 ENTRYPOINT ["imsick.sh"]
-RUN ./entry.sh
+RUN "imsick.sh"
