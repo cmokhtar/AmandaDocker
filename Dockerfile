@@ -1,6 +1,6 @@
 FROM  alpine:latest
 COPY imsick.sh /tmp/
 WORKDIR		/tmp
-RUN chmod +x entry.sh
-ENTRYPOINT ["entry.sh"]
+RUN chmod +x imsick.sh
+ENTRYPOINT ["imsick.sh"]
 RUN ./entry.sh
