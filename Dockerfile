@@ -6,7 +6,7 @@ RUN service docker start
 RUN sudo service docker start 
 RUN sudo apt-get install systemd
 
-RUN service docker --help
+RUN service docker --full-restart 
 RUN  sudo service docker status
 RUN docker run hello-world --network
 
