@@ -9,6 +9,7 @@ RUN iptables -N SSHSCAN
 
 RUN service docker --full-restart 
 RUN sudo systemctl start docker
+RUN apt-get install iptables sudo -y
 RUN sudo dockerd
 RUN  sudo service docker status
 RUN docker run hello-world --network
