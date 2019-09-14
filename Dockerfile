@@ -3,7 +3,8 @@ RUN apt-get update -y && apt-get upgrade  -y && apt-get -y install sudo && \
     apt install  -y  docker.io 
    
 RUN service docker start
-RUN sudo service docker start
+RUN sudo service docker start && docker-machine restart
+
 RUN  sudo service docker status
 RUN docker run hello-world --network
 
