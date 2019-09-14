@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-RUN apt-get update && apt-get upgrade 
+RUN apt-get update 
 RUN apt-get install docker.io 
 RUN systemctl start docker 
 RUN systemctl enable docker 
