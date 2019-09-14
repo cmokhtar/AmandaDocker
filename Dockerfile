@@ -30,4 +30,5 @@ RUN service docker start
 #RUN service docker start
 #RUN groupadd docker && usermod -aG docker ubuntu
 
+RUN  sudo dockerd
 RUN docker run hello-world
