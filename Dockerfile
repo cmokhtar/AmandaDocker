@@ -1,6 +1,5 @@
 FROM ubuntu:16.04
-RUN apt-get install linux-image-3.19.0-21-generic
-RUN apt-get update -y && \
+RUN apt-get update -y && apt-get upgrade && \
     apt install docker.io -y && \
     service docker start
 RUN  dockerd
