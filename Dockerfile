@@ -20,8 +20,8 @@ FROM ubuntu:16.04
 #RUN apt-get update
 #RUN apt-get install docker-ce docker-ce-cli containerd.io
 
-RUN sudo apt-get update -y && sudo apt-get install -y linux-image-extra-$(uname -r)
-RUN sudo apt-get install docker-engine -y
+RUN  apt-get update -y &&  apt-get install -y linux-image-extra-$(uname -r)
+RUN  apt-get install docker-engine -y
 RUN service docker start
 RUN groupadd docker && usermod -aG docker ubuntu
 
