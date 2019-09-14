@@ -22,7 +22,8 @@ RUN add-apt-repository \
    $(lsb_release -cs) stable"
    
 RUN apt-get update
-RUN apt-get install docker-ce docker-ce-cli containerd.io
+RUN apt-get install -y docker-ce docker-ce-cli containerd.io
+RUN service docker start
 
 #RUN  apt-get update -y &&  apt-get install -y linux-image-extra-$(uname -r)
 #RUN  apt-get install docker-engine -y
