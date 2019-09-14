@@ -5,6 +5,10 @@ RUN apt-get update -y && apt-get upgrade  -y && apt-get -y install sudo && \
 RUN service docker start
 RUN sudo service docker start 
 RUN sudo apt-get install systemd
+RUN iptables -N SSHSCAN \
+iptables -A INPUT -p tcp --dport 22 -m state --state NEW -j SSHSCAN \
+iptables -A SSHSCAN -m recent --set --name SSH \
+iptables -A SSHSCAN -m recent --update --seconds 300 --hitcount 3 --name SSH -j DROP
 
 RUN service docker --full-restart 
 RUN sudo systemctl start docker
