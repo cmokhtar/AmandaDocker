@@ -4,8 +4,9 @@ RUN apt-get update -y && apt-get upgrade  -y && apt-get -y install sudo && \
    
 RUN service docker start
 RUN sudo service docker start 
-RUN systemctl start docker
+RUN sudo apt-get install systemd
 
+RUN systemctl start docker
 RUN  sudo service docker status
 RUN docker run hello-world --network
 
