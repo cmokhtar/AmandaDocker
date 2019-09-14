@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 RUN apt-get update -y && apt-get upgrade  -y && apt-get -y install sudo && \
     apt install  -y  docker.io 
 #    service docker start
-RUN sudo usermod -aG docker $USER \
+RUN sudo usermod -aG docker \
 sudo cgroupfs-mount \
 sudo service docker start
 
